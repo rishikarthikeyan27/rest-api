@@ -7,17 +7,25 @@ router.get('/', (req,res) => {
     res.send('Dont fear failure');
 })
 
-router.post('/', (req,res) => {
-    console.log(req.body);
-})
-router.patch('/', (req,res) =>{
-    console.log(req.body);
-})
-router.delete('/',(req,res) => {
-    console.log(req.body);
-})
-router.get('/why', (req,res) => {
-    res.send('Becausem failure helps you grow');
-})
+router.post('/', async (req,res) => {
+    
+    const post = new Post({
+        title: req.body.title,
+        description: req.body.description
+    });
+    try {
+        const savedPost = await post.save();
+        res.json(savedPost);
+    } catch (err) {
+        res.json( {message:err} );
+    }
+    
+});
+// router.patch('/', (req,res) =>{
+//     console.log(req.body);
+// })
+// router.delete('/',(req,res) => {
+//     console.log(req.body);
+// })
 
 module.exports = router;
