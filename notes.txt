@@ -8,3 +8,15 @@ So what I am trying to do here is to note down the most important stuff that I n
 6) dotenv is important for us to hide our passwords and stuff. Please expand your knowledge base on this
 7) Here we learnt that to use what we have added in our .env file we need to type it as process.env.<name of the variable in the .env file>
 This is done after we have require('dotenv/config')
+
+8) So we create a seperate folder for routes so that we can send a response, and then we connected posts.js to app.js
+9) the way we do that is app.use('/',postsRoutes)
+
+const postsRoutes = require('../routes/posts')
+10) a function or program that runs between the time from that the server gets 
+the request and the time server sends the response to the client.
+
+11) app.use('/',postsRoutes) means the middleware posts.js 
+is mounted on '/' path (as in home). This script is executed
+for any type of HTTP request on the '/' path.
+
