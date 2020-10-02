@@ -20,3 +20,10 @@ the request and the time server sends the response to the client.
 is mounted on '/' path (as in home). This script is executed
 for any type of HTTP request on the '/' path.
 
+12) Now we have to understand that nodemon is running app.js
+So we need to import post.js in app.js to make the website run.
+
+13) In models we have the "model" for sending and receiving data...
+
+And then we export this model as mongoose.model('<what name you want to export it as>', <the name of the reference to the javascript>)
+
