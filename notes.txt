@@ -1,11 +1,17 @@
 So what I am trying to do here is to note down the most important stuff that I need to remember later on:
 
 1) Express helps us add routes very easily
+
 2) Before adding routes we need to listen
+
 3) Nodemon is for node.js to restart the server with every new change automatically
+
 4) Mongoose is what we are going to use to connect to our mongoDB database
+
 5) mongoose.connect('<dbconnection>', {useNewUrlParser: true}, () => console.log('connected to db))
+
 6) dotenv is important for us to hide our passwords and stuff. Please expand your knowledge base on this
+
 7) Here we learnt that to use what we have added in our .env file we need to type it as process.env.<name of the variable in the .env file>
 This is done after we have require('dotenv/config')
 

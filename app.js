@@ -21,7 +21,7 @@ app.use('/posts', postsRoute);
 mongoose.connect(
     process.env.DB_CONNECTION, 
     {useNewUrlParser : true},
-    () => console.log('Ok'))
+    () => console.log('OK'))
 
 
 //Listen
